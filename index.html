@@ -15,41 +15,133 @@ My homepage source code
    <head>
      <title>Sami Jakonen : s.jaks.fi</title>
      <link href="https://fonts.googleapis.com/css?family=Muli:300&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+
+     <meta charset="UTF-8">
+     <meta name="description" content="Sami Jakonen's homepage">
+     <meta name="author" content="Sami Jakonen">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <style>
-           * {
-                 font-family: 'Muli', sans-serif;
-                 text-decoration: none;
-                 color: #525252;
-           }
            body {
-                 display: block;
-                 width: 700px;
-                 margin: 25px auto;
+                 font-family: 'Muli', sans-serif;
+                 color: #676767;
+                 background: #f9f9f9;
            }
-           small {
-                 color: #dbdbdb !important;
-           }
-           a, a:hover, a:visited {
+           a, a:visited {
+                 color: #525252;
                  text-decoration: underline !important;
+                 transition: 0.3s;
            }
-           img {
+           a:hover  {
+                 color: #000000 !important;
+           }
+           .content-wrapper {
+                 max-width: 610px;
+                 height: auto;
+                 margin: 0px auto;
+                 padding: 25px;
+           }
+           .content-container {
+                 width: 100%;
+                 height: auto;
+           }
+           .content-container .bio {
+                 font-style: italic;
+                 margin: 25px 0px;;
+           }
+           .content-footer-text {
+                 margin: 25px 0px;
+           }
+           .title-container {
+                 max-width: 610px;
+                 height: 100px;
+                 margin: 50px 0px;
+           }
+           .title-container .text-box {
+                 width: auto;
+                 float: left;
+                 padding: 16px;
+           }
+           .title-container .text-box .title {
+                 font-size: 23px;
+                 font-weight: bold;
+                 display: block;
+           }
+           .title-container .text-box .subtitle-1 {
+                 font-size: 13px;
+                 display: block;
+           }
+           .title-container .image-box {
+                 height: 100px;
+                 width: 100px;
+                 background: url("https://avatars1.githubusercontent.com/u/44066308");
+                 background-size: cover;
                  border-radius: 50%;
-            }
+                 float: left;
+           }
+           .media-icon  {
+                 font-size: 20px;
+                 padding: 10px;
+           }
+           .image-gallery {
+                 padding: 15px;
+           }
+           .image-flexbox {
+                 width: 25%;
+                 display: flex;
+           }
+           .image-gallery img {
+                 border-radius: 50%;
+                 max-width: 100%;
+                 max-height: 100%;
+                 padding: 15px;
+                 display: block;
+                 -webkit-user-drag: none;
+                 -khtml-user-drag: none;
+                 -moz-user-drag: none;
+                 -o-user-drag: none;
+           }
       </style>
   </head>
   <body>
-    <img src="https://avatars1.githubusercontent.com/u/44066308" width=300>
-    <br>
-    <h1>Welcome to s.jaks.fi!</h1>
-    <b>Sami Jakonen</b>
-    <br>Keys: <a target=_BLANK href="https://s.jaks.fi/keys/pgp.txt">PGP</a> - 
-    <a target=_BLANK href="https://s.jaks.fi/keys/ssh.txt">SSH</a>
-    <br>
-    <br><a target=_BLANK href="https://github.com/sjaks">Github</a> <small>code</small>
-    <br><a target=_BLANK href="https://linkedin.com/in/sjaks">LinkedIn</a> <small>cv</small>
-    <br><a target=_BLANK href="https://t.me/sjaks">Telegram</a> <small>chat</small>
-    <br>
-    <br>
-    Usually <i>sjaks</i> or <i>psami</i> on the interwebs.
+    <div class="content-wrapper">
+            <div class="title-container">
+                  <div class="image-box"></div>
+                  <div class="text-box">
+                        <span class="title">
+                              Sami Jakonen
+                        </span>
+                        <span class="subtitle-1">
+                              Tampere, Finland
+                        </span>
+                  </div>
+            </div>
+            <div class="content-container">
+                  <div class="bio">
+                        Lifelong Unix-like system enthusiast. I love open source and I feel at home in the Linux terminal.
+                        Interested in software development, web technologies, electronics and telecommunication.
+                        Student of information technology at Tampere University. 
+                        Usually sjaks or psami on the interwebs.
+                  </div>
+                  <div class="content-footer">
+                        <a target=_BLANK href="https://github.com/sjaks"><i class="media-icon fab fa-github"></i></a>
+                        <a target=_BLANK href="https://linkedin.com/in/sjaks"><i class="media-icon fab fa-linkedin-in"></i></a>
+                        <a target=_BLANK href="https://twitter.com/samijakonen"><i class="media-icon fab fa-twitter"></i></a>
+                        <a target=_BLANK href="https://t.me/sjaks"><i class="media-icon fab fa-telegram-plane"></i></a>
+                        <a target=_BLANK href="https://sjaks.imgbb.com/albums"><i class="media-icon fas fa-camera"></i></i></a>
+                        <div class="content-footer-text">
+                              If you want to send me a secret message, encrypt it with my <a target=_BLANK href="https://s.jaks.fi/keys/pgp.txt">PGP key</a> 
+                              and should you need it, you'll find my <a target=_BLANK href="https://s.jaks.fi/keys/ssh.txt">SSH key here.</a>
+                        </div>
+                  </div>
+                  <div class="image-gallery">
+                        <div class="image-flexbox">
+                              <img src="data/thinkpad.jpg">
+                              <img src="data/toto.jpg">
+                              <img src="data/midsummer.jpg">
+                        </div>
+                  </div>
+            </div>
+      </div>
   </body>
 </html>
