@@ -13,9 +13,10 @@ My homepage source code
 body, html {
     font-family: 'Muli', sans-serif;
     color: #676767;
-    background: #f9f9f9;
+    background-color: #f9f9f9;
     margin: 0px;
     padding: 0px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 a, a:visited {
@@ -25,7 +26,7 @@ a, a:visited {
 }
 
 a:hover  {
-    color: #000000 !important;
+    color: #ffb300 !important;
 }
 
 .content-wrapper {
@@ -105,6 +106,18 @@ a:hover  {
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
+}
+
+#theme-switch {
+    float: right;
+    padding-right: 40px;
+    cursor: pointer;
+    color: #676767;
+    transition: color 0.3s;
+}
+
+#theme-switch:hover {
+    color: #f5c842;
 }
 
 #load-cover {
