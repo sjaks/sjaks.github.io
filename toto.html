@@ -13,12 +13,12 @@ My homepage source code
 
 <html>
       <head>
-            <title>Index : jaks.fi</title>
+            <title>Toto : jaks.fi</title>
             <link href="https://fonts.googleapis.com/css?family=Muli:300&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
 
             <meta charset="UTF-8">
-            <meta name="description" content="Sami Jakonen's homepage">
+            <meta name="description" content="Homepage for Mittelspitz Toto">
             <meta name="author" content="Sami Jakonen">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="assets/styles/main.css" type="text/css">
@@ -36,32 +36,45 @@ My homepage source code
                               <a href="keys.html">keys</a>
                         </nav>
                   </div>
-
+                  
                   <div class="content-container">
                         <figure>
-                              <img src="assets/images/avatar.jpg">
+                              <img src="assets/images/toto_5.jpg">
+                              <figcaption>At lake Keitele</figcaption>
                         </figure>
-                        
-                        <p>
-                              Sami Jakonen
-                              <br>
-                              Tampere, Finland
-                        </p>
-
-                        <ul>
-                              <li><a target=_BLANK href="https://github.com/sjaks">GitHub</a></li>
-                              <li><a target=_BLANK href="https://linkedin.com/in/sjaks">LinkedIn</a></li>
-                              <li><a target=_BLANK href="https://t.me/sjaks">Telegram</a></li>
-                              <li><a target=_BLANK href="https://twitter.com/_sjaks">Twitter</a></li>
-                              <li><a target=_BLANK href="https://steamcommunity.com/id/_sjaks">Steam</a></li>
-                        </ul>
 
                         <p>
-                              I love free/libre/open source software and I feel at home in the Linux terminal.
-                              Interests: <i>web</i>, <i>telecom</i>, <i>electronics</i> and <i>simplicity</i>.
+                              Toto is a registered German Mittelspitz born on November 24th 2019.
+                              He doesn't seem to like to code but instead, loves scratches and cottage cheese.
                         </p>
+
+                        <p>
+                              Age: <span id="toto-age">1574596800000</span> ms
+                        </p>
+
+                        <figure>
+                              <img src="assets/images/toto_7.jpg">
+                              <figcaption>Äänekoski : June 12th 2020</figcaption>
+                        </figure>
+
+                        <figure>
+                              <img src="assets/images/toto_9.jpg">
+                              <figcaption>Tampere : March 24th 2020</figcaption>
+                        </figure>
+
+                        <figure>
+                              <img src="assets/images/toto_3.jpg">
+                              <figcaption>Ylöjärvi : January 12th 2020</figcaption>
+                        </figure>
                   </div>
             </div>
+            <script>
+                  var ageField = document.getElementById("toto-age");
+                  setInterval(function() {
+                        /* use a predefined birth day epoch time (12PM GMT) to get the age in ms */
+                        ageField.innerHTML = Date.now() - 1574596800000;
+                  }, 100);
+            </script>
       </body>
 <body>
  

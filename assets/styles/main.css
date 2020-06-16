@@ -1,0 +1,64 @@
+/*
+      _       _        
+ ___ (_) __ _| | _____  sjaks@github
+/ __|| |/ _` | |/ / __| jaks.fi
+\__ \| | (_| |   <\__ \ ------------
+|___// |\__,_|_|\_\___/ sjaks.github.io
+   |__/                
+
+BRIEF:
+My homepage source code
+*/
+
+body, html {
+    font-family: 'Cutive Mono', monospace;
+    color: #000000;
+    background-color: #f9f9f9;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+a, .menu a:visited {
+    color: #000000;
+    text-decoration: underline;
+}
+
+a:hover {
+    /* make links more noticeable */
+    text-decoration: none;
+}
+
+ul ul {
+    /* do not add margin to nested lists */
+    margin: 0px !important;
+}
+
+.wrapper {
+    width: 380px;
+    margin: 20px auto;
+}
+
+.content-container {
+    width: 300px;
+    float: right;
+}
+
+.content-container figure, .content-container p, .content-container ul {
+    margin: 0px 0px 35px 0px;
+}
+
+.content-container figure img {
+    /* fit images into the container */
+    width: 100%;
+}
+
+.menu-container {
+    width: 80px;
+    float: left;
+    text-align: right;
+}
+
+.menu-container nav {
+    padding-right: 10px;
+}
+
