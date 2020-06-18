@@ -1,10 +1,10 @@
 <!--
-      _       _        
+      _       _
  ___ (_) __ _| | _____  sjaks@github
 / __|| |/ _` | |/ / __| jaks.fi
 \__ \| | (_| |   <\__ \ ------------
 |___// |\__,_|_|\_\___/ sjaks.github.io
-   |__/                
+   |__/
 
 BRIEF:
 My homepage source code
@@ -36,7 +36,7 @@ My homepage source code
                               <a href="keys.html">keys</a>
                         </nav>
                   </div>
-                  
+
                   <div class="content-container">
                         <figure>
                               <img src="assets/images/toto_5.jpg">
@@ -49,7 +49,7 @@ My homepage source code
                         </p>
 
                         <p>
-                              Age: <span id="toto-age">1574596800000</span> ms
+                              Age: <span id="toto-age">0</span> months
                         </p>
 
                         <figure>
@@ -72,9 +72,8 @@ My homepage source code
                   var ageField = document.getElementById("toto-age");
                   setInterval(function() {
                         /* use a predefined birth day epoch time (12PM GMT) to get the age in ms */
-                        ageField.innerHTML = Date.now() - 1574596800000;
-                  }, 100);
+                        ageField.innerHTML = ((Date.now() - 1574596800000) / 2.628e+9).toFixed(8);
+                  }, 200);
             </script>
       </body>
 <body>
- 
