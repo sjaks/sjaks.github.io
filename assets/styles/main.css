@@ -32,12 +32,14 @@ a:hover {
 .landing-screen {
     width: 100%;
     height: 100%;
+    background: url(../images/cover.jpg);
+    background-size: cover;
 }
 
 .header {
     width: 100%;
     height: 50%;
-    background: #222222;
+    background: #222222F9;
     position: relative;
 }
 
@@ -65,7 +67,7 @@ a:hover {
 .landing-content {
     width: 100%;
     height: 50%;
-    background: #111111;
+    background: #111111FD;
     position: relative;
 }
 
