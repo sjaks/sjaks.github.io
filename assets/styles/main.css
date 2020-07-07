@@ -11,54 +11,113 @@ My homepage source code
 */
 
 body, html {
-    font-family: 'Cutive Mono', monospace;
-    color: #000000;
-    background-color: #f9f9f9;
+    font-family: 'Inconsolata', monospace;
+    color: #eeeeee;
+    background-color: #111111;
     font-size: 15px;
-    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
 }
 
 a, .menu a:visited {
-    color: #000000;
-    text-decoration: underline;
+    color: #2bbc8a;
+    text-decoration: none;
 }
 
 a:hover {
     /* make links more noticeable */
-    text-decoration: none;
+    text-decoration: underline;
 }
 
-ul ul {
-    /* do not add margin to nested lists */
-    margin: 0px !important;
+.landing-screen {
+    width: 100%;
+    height: 100%;
 }
 
-.wrapper {
-    width: 380px;
-    margin: 20px auto;
+.header {
+    width: 100%;
+    height: 50%;
+    background: #222222;
+    position: relative;
+}
+
+.header-wrapper {
+    width: 680px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    position: absolute;
+    bottom: 4vh;
+}
+
+.header ul li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
+    padding-right: 15px;
+    border-right: 1px dotted #2bbc8a;
+}
+
+.header ul .last {
+    border-right: none;
+}
+
+.landing-content {
+    width: 100%;
+    height: 50%;
+    background: #111111;
+    position: relative;
 }
 
 .content-container {
-    width: 300px;
-    float: right;
+    width: 680px;
+    margin: 0px auto;
+    padding-top: 4vh;
 }
 
 .content-container figure, .content-container p, .content-container ul {
     margin: 0px 0px 35px 0px;
 }
 
-.content-container figure img {
+.content-container .block-img {
     /* fit images into the container */
-    width: 100%;
-}
-
-.menu-container {
-    width: 80px;
+    height: 230px;
+    width: 230px;
     float: left;
-    text-align: right;
 }
 
-.menu-container nav {
-    padding-right: 10px;
+.content-container .block-content {
+    /* fit images into the container */
+    height: 230px;
+    width: 420px;
+    float: right;
 }
 
+.block {
+    width: 100%;
+    height: 360px;
+}
+
+.long-block {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.log-block {
+    height: 320px;
+    width: 300px;
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 80px;
+}
+
+.log-block img {
+    /* fit images into the container */
+    height: 300px;
+    width: 300px;
+}
+
+.tag {
+    color: #268bd2;
+}
