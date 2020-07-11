@@ -77,6 +77,8 @@ My homepage source code
                     <br>
                     <a target=_BLANK href="https://github.com/sjaks/pitemp">pitemp</a> temperature monitor <span class="tag tech">[Docker] [Grafana] [InfluxDB]</span>
                     <br>
+                    <a target=_BLANK href="https://github.com/sjaks/github-latest-events">github-latest-events</a> GitHub log app <span class="tag tech">[Nodejs] [Rest API]</span>
+                    <br>
                     <a target=_BLANK href="https://github.com/Seravo/seravo-plugin">seravo-plugin</a> Seravo WP plugin <span class="tag tech">[PHP] [jQuery] [WordPress]</span>
                     <br>
                     <br>
@@ -125,7 +127,7 @@ My homepage source code
             </div>
             <div class="long-block">
                 <h1>Life</h1>
-                <p>Log of my life at random intervals.</p>
+                <p>Log of my life at random intervals</p>
                 <button class="toggle-log">Toggle posts</button>
                 <div class="content">
                     <br>
@@ -167,6 +169,14 @@ My homepage source code
                     </div>
                 </div>
             </div>
+            <div class="long-block">
+                <h1>Git</h1>
+                <p>My GitHub history fetched by <a target=_BLANK href="https://github.com/sjaks/github-latest-events">github-latest-events</a></p>
+                <button class="toggle-log">Toggle Git events</button>
+                <div class="content">
+                    W.I.P. Coming soon.
+                </div>
+            </div>
             <img width=24 src="assets/icons/balloon_dog.png">
             Pasteleft - Sami Jakonen - jaks.fi
             <br>
@@ -181,18 +191,20 @@ My homepage source code
                     cookieField.innerHTML = ((Date.now() - 1574596800000) / 8.64e+7).toFixed(0);
             }, 200);
 
-            var coll = document.getElementsByClassName("toggle-log")[0];
+            var coll = document.getElementsByClassName("toggle-log");
 
-            coll.addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
 
-                if (content.style.maxHeight){
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                } 
-            });
+                    if (content.style.maxHeight){
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    } 
+                });
+            }
         </script>
     </body>
 </html>
