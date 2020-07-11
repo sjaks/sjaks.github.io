@@ -151,3 +151,31 @@ a:hover {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
+
+#git-view a {
+    text-decoration: none !important;
+}
+
+#git-view hr {
+    height: 1px;
+    border: none;
+    background: #888888;
+    margin: 30px 0px;
+}
+
+.git-clause {
+    color: #eeeeee;
+}
+
+.git-clause-right {
+    display: block;
+    float: left;
+    color: #888888;
+}
+
+.git-info {
+    color: #888888;
+    font-style: italic;
+    display: block;
+    width: 70%;
+}
