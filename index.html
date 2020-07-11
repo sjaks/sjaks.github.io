@@ -125,43 +125,46 @@ My homepage source code
             </div>
             <div class="long-block">
                 <h1>Life</h1>
-                <p>This is a log of my life at random intervals.</p>
-                <br>
-                <div class="log-block">
-                    <img src="assets/images/tux.jpg" alt="Tux">
-                    <p>Using Linux at work is bliss</p>
-                </div>
-                <div class="log-block">
-                    <img src="assets/images/herwood.jpg" alt="Herwood">
-                    <p>Mikkis from afar</p>
-                </div>
-                <div class="log-block">
-                    <img src="assets/images/trip.jpg" alt="Trip">
-                    <p>Going home</p>
-                </div>
-                <div class="log-block">
-                    <img src="assets/images/dog.jpg" alt="Dog">
-                    <p>Quite a life changer</p>
-                </div>
-                <div class="log-block">
-                    <img src="assets/images/2020.jpg" alt="2020">
-                    <p>Copenhagen 2020</p>
-                </div>
-                <div class="log-block">
-                    <img src="assets/images/tuni.jpg" alt="Tuni">
-                    <p>Human potential unlimited</p>
-                </div>
-                <div class="log-block">
-                    <img src="assets/images/mikkis.jpg" alt="Mikkis">
-                    <p>Oi, suuri ja mahtava...</p>
-                </div>
-                <div class="log-block">
-                    <img src="assets/images/cern.jpg" alt="Cern">
-                    <p>Keeps nuclear physicists going</p>
-                </div>
-                <div class="log-block">
-                    <img src="assets/images/geneva.jpg" alt="Geneva">
-                    <p>So many banks and Rolex stores</p>
+                <p>Log of my life at random intervals.</p>
+                <button class="toggle-log">Toggle posts</button>
+                <div class="content">
+                    <br>
+                    <div class="log-block">
+                        <img src="assets/images/tux.jpg" alt="Tux">
+                        <p>Using Linux at work is bliss</p>
+                    </div>
+                    <div class="log-block">
+                        <img src="assets/images/herwood.jpg" alt="Herwood">
+                        <p>Mikkis from afar</p>
+                    </div>
+                    <div class="log-block">
+                        <img src="assets/images/trip.jpg" alt="Trip">
+                        <p>Going home</p>
+                    </div>
+                    <div class="log-block">
+                        <img src="assets/images/dog.jpg" alt="Dog">
+                        <p>Quite a life changer</p>
+                    </div>
+                    <div class="log-block">
+                        <img src="assets/images/2020.jpg" alt="2020">
+                        <p>Copenhagen 2020</p>
+                    </div>
+                    <div class="log-block">
+                        <img src="assets/images/tuni.jpg" alt="Tuni">
+                        <p>Human potential unlimited</p>
+                    </div>
+                    <div class="log-block">
+                        <img src="assets/images/mikkis.jpg" alt="Mikkis">
+                        <p>Oi, suuri ja mahtava...</p>
+                    </div>
+                    <div class="log-block">
+                        <img src="assets/images/cern.jpg" alt="Cern">
+                        <p>Keeps nuclear physicists going</p>
+                    </div>
+                    <div class="log-block">
+                        <img src="assets/images/geneva.jpg" alt="Geneva">
+                        <p>So many banks and Rolex stores</p>
+                    </div>
                 </div>
             </div>
             <img width=24 src="assets/icons/balloon_dog.png">
@@ -177,6 +180,19 @@ My homepage source code
                     ageField.innerHTML = ((Date.now() - 1574596800000) / 2.628e+9).toFixed(8);
                     cookieField.innerHTML = ((Date.now() - 1574596800000) / 8.64e+7).toFixed(0);
             }, 200);
+
+            var coll = document.getElementsByClassName("toggle-log")[0];
+
+            coll.addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+
+                if (content.style.maxHeight){
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } 
+            });
         </script>
     </body>
 </html>
