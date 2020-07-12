@@ -121,12 +121,12 @@ a:hover {
 
 .tag {
     color: #268bd2;
-    display: block;
 }
 
 .tech {
     color: #268bd2;
     font-size: 11px;
+    display: block;
 }
 
 .toggle-log {
@@ -177,4 +177,5 @@ a:hover {
     color: #888888;
     font-style: italic;
     display: block;
+    width: 100%;
 }
