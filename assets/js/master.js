@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#loading-screen').delay(600).fadeOut(400);
+    //$('#loading-screen').delay(600).fadeOut(400);
 
     var ageField = document.getElementById("toto-age");
     var cookieField = document.getElementById("toto-biscuit");
