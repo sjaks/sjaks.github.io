@@ -33,14 +33,14 @@ server {
                 proxy_pass http://localhost:6789;
         }
 
-        error_page 403 error.html;
-        error_page 404 error.html;
-        error_page 405 error.html;
-        error_page 500 error.html;
-        error_page 501 error.html;
-        error_page 502 error.html;
-        error_page 503 error.html;
-        error_page 504 error.html;
+        error_page 403 /error.html;
+        error_page 404 /error.html;
+        error_page 405 /error.html;
+        error_page 500 /error.html;
+        error_page 501 /error.html;
+        error_page 502 /error.html;
+        error_page 503 /error.html;
+        error_page 504 /error.html;
 
         listen [::]:443 ssl ipv6only=on; # managed by Certbot
         listen 443 ssl; # managed by Certbot
