@@ -35,7 +35,7 @@ $(document).ready(function() {
                     + "<span class='git-repo'>[" + val.repo + "]</span> "
                     + "<span class='git-clause'>" + val.clause + "</span></a>"
                     + "<span class='git-clause-right'>" + val.timestamp + "</span>"
-                    + "<span class='git-info'><br>" + val.info + "</span><hr>"
+                    + "<br>"
                 )
             });
         } else {

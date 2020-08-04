@@ -156,13 +156,6 @@ a:hover {
     text-decoration: none !important;
 }
 
-#git-view hr {
-    height: 1px;
-    border: none;
-    background: #888888;
-    margin: 30px 0px;
-}
-
 .git-clause {
     color: #eeeeee;
 }
@@ -170,12 +163,6 @@ a:hover {
 .git-clause-right {
     float: right;
     color: #888888;
-}
-
-.git-info {
-    color: #888888;
-    font-style: italic;
-    display: block;
 }
 
 #loading-screen {
