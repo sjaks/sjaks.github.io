@@ -1,9 +1,10 @@
-# sudo ln -s /etc/nginx/sites-available/jaks.fi /etc/nginx/sites-enabled/
+# sudo ln -sf /home/sami/jaks.fi/nginx/jaks.fi /etc/nginx/sites-available/jaks.fi
+# sudo ln -sf /etc/nginx/sites-available/jaks.fi /etc/nginx/sites-enabled/
 # sudo rm /etc/nginx/sites-enabled/default
 # sudo rm /etc/nginx/sites-available/default
 
 # sudo mkdir -p /var/www/jaks.fi/html
-# sudo ln -s /home/sami/jaks.fi /var/www/jaks.fi/html
+# sudo ln -sf /home/sami/jaks.fi /var/www/jaks.fi/html
 
 # sudo apt-get install python-certbot-nginx
 # sudo certbot --nginx -d jaks.fi -d www.jaks.fi
