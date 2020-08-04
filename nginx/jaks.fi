@@ -1,0 +1,67 @@
+# sudo ln -s /etc/nginx/sites-available/jaks.fi /etc/nginx/sites-enabled/
+# sudo rm /etc/nginx/sites-enabled/default
+# sudo rm /etc/nginx/sites-available/default
+
+# sudo mkdir -p /var/www/jaks.fi/html
+# sudo ln -s /home/sami/jaks.fi /var/www/jaks.fi/html
+
+# sudo apt-get install python-certbot-nginx
+# sudo certbot --nginx -d jaks.fi -d www.jaks.fi
+# sudo certbot renew --dry-run
+
+server {
+        charset utf-8;
+        root /var/www/jaks.fi/html;
+        index index.html index.htm;
+        server_name jaks.fi www.jaks.fi;
+
+        location / {
+               try_files $uri $uri/ =404;
+        }
+
+        location /dir {
+               autoindex on;
+        }
+
+        location /github-latest-events {
+                proxy_pass http://localhost:4040;
+                add_header Access-Control-Allow-Origin *;
+        }
+
+        location /hiide {
+                proxy_pass http://localhost:6789;
+        }
+
+        error_page 403 error.html;
+        error_page 404 error.html;
+        error_page 405 error.html;
+        error_page 500 error.html;
+        error_page 501 error.html;
+        error_page 502 error.html;
+        error_page 503 error.html;
+        error_page 504 error.html;
+
+        listen [::]:443 ssl ipv6only=on; # managed by Certbot
+        listen 443 ssl; # managed by Certbot
+        ssl_certificate /etc/letsencrypt/live/jaks.fi/fullchain.pem; # managed by Certbot
+        ssl_certificate_key /etc/letsencrypt/live/jaks.fi/privkey.pem; # managed by Certbot
+        include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+        ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+
+server {
+        charset utf-8;
+
+        if ($host = www.jaks.fi) {
+                return 301 https://$host$request_uri;
+        } # managed by Certbot
+
+        if ($host = jaks.fi) {
+                return 301 https://$host$request_uri;
+        } # managed by Certbot
+
+        listen 80;
+        listen [::]:80;
+        server_name jaks.fi www.jaks.fi;
+        return 404; # managed by Certbot
+}
