@@ -17,7 +17,7 @@ server {
                 add_header Access-Control-Allow-Origin *;
         }
 
-        location /hiide {
+        location /hrr {
                 proxy_pass http://localhost:6789;
         }
 
