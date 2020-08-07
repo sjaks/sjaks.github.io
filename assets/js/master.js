@@ -77,7 +77,7 @@ $(document).ready(function() {
     }
     
     
-    $.get("https://jaks.fi/github-latest-events/", function(data) {
+    $.get("https://jaks.fi/git/", function(data) {
         if (!data.error) {
             $.each(data.events, function(i, val) {
                 $("#git-view").append(

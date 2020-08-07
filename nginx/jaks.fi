@@ -12,8 +12,8 @@ server {
                autoindex on;
         }
 
-        location /github-latest-events {
-                proxy_pass http://localhost:4040;
+        location /git {
+                proxy_pass http://localhost:4040/github-latest-events;
                 add_header Access-Control-Allow-Origin *;
         }
 
