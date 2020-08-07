@@ -156,13 +156,17 @@ a:hover {
     text-decoration: none !important;
 }
 
+#git-view a:hover {
+    text-decoration: underline !important;
+    text-decoration-color: #eeeeee !important;
+}
+
 .git-clause {
     color: #eeeeee;
 }
 
 .git-clause-right {
     float: right;
-    color: #888888;
 }
 
 #loading-screen {

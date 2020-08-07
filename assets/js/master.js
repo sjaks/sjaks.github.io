@@ -84,7 +84,7 @@ $(document).ready(function() {
                       "<a href='" + val.url + "' target='_BLANK'>"
                     + "<span class='git-repo'>[" + val.repo + "]</span> "
                     + "<span class='git-clause'>" + val.clause + "</span></a>"
-                    + "<span class='git-clause-right'>" + getTimeStamp(val.timestamp) + "</span>"
+                    + "<span class='git-clause-right tag tech'>" + getTimeStamp(val.timestamp) + "</span>"
                     + "<br>"
                 )
             });
