@@ -3,6 +3,7 @@ server {
         root /var/www/jaks.fi/html;
         index index.html index.htm;
         server_name jaks.fi www.jaks.fi;
+        access_log off;
 
         location / {
                try_files $uri $uri/ =404;
