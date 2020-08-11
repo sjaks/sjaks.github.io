@@ -6,6 +6,7 @@ sudo ln -sf /home/sami/jaks.fi/nginx/jaks.fi /etc/nginx/sites-available/jaks.fi
 sudo ln -sf /etc/nginx/sites-available/jaks.fi /etc/nginx/sites-enabled/jaks.fi
 sudo rm /etc/nginx/sites-enabled/default
 sudo rm /etc/nginx/sites-available/default
+sudo rm /var/log/nginx/access.log*
 
 sudo mkdir -p /var/www/jaks.fi/html
 sudo ln -sf /home/sami/jaks.fi /var/www/jaks.fi/html
