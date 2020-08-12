@@ -2,7 +2,7 @@ server {
         charset utf-8;
         root /var/www/jaks.fi/html;
         index index.html index.htm;
-        server_name jaks.fi www.jaks.fi;
+        server_name jaks.fi www.jaks.fi s.jaks.fi gh.jaks.fi;
         access_log off;
 
         location / {
