@@ -1,6 +1,6 @@
 server {
         charset utf-8;
-        access_log  /dev/null;
+        access_log /dev/null;
         error_log /dev/null;
         root /var/www/jaks.fi/html;
         index index.html index.htm;
@@ -31,30 +31,4 @@ server {
         error_page 502 /error.html;
         error_page 503 /error.html;
         error_page 504 /error.html;
-
-        listen [::]:443 ssl ipv6only=on; # managed by Certbot
-        listen 443 ssl; # managed by Certbot
-        ssl_certificate /etc/letsencrypt/live/jaks.fi/fullchain.pem; # managed by Certbot
-        ssl_certificate_key /etc/letsencrypt/live/jaks.fi/privkey.pem; # managed by Certbot
-        include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-        ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
-}
-
-server {
-        charset utf-8;
-        access_log  /dev/null;
-        error_log /dev/null;
-
-        if ($host = www.jaks.fi) {
-                return 301 https://$host$request_uri;
-        } # managed by Certbot
-
-        if ($host = jaks.fi) {
-                return 301 https://$host$request_uri;
-        } # managed by Certbot
-
-        listen 80;
-        listen [::]:80;
-        server_name jaks.fi www.jaks.fi;
-        return 404; # managed by Certbot
 }
