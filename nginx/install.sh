@@ -8,6 +8,7 @@ sudo rm /etc/nginx/sites-enabled/default
 sudo rm /etc/nginx/sites-available/default
 sudo rm /var/log/nginx/access.log*
 
+sudo mkdir -p /var/www/jaks.fi/
 sudo ln -sf /home/sami/jaks.fi/ /var/www/jaks.fi/html
 
 sudo certbot --nginx -d jaks.fi -d www.jaks.fi
