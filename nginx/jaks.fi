@@ -1,9 +1,10 @@
 server {
         charset utf-8;
+        access_log  /dev/null;
+        error_log /dev/null;
         root /var/www/jaks.fi/html;
         index index.html index.htm;
-        server_name jaks.fi www.jaks.fi s.jaks.fi gh.jaks.fi;
-        access_log off;
+        server_name jaks.fi www.jaks.fi;
 
         location / {
                try_files $uri $uri/ =404;
@@ -41,6 +42,8 @@ server {
 
 server {
         charset utf-8;
+        access_log  /dev/null;
+        error_log /dev/null;
 
         if ($host = www.jaks.fi) {
                 return 301 https://$host$request_uri;
