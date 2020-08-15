@@ -3,15 +3,20 @@
  ___ (_) __ _| | _____  sjaks@github
 / __|| |/ _` | |/ / __| jaks.fi
 \__ \| | (_| |   <\__ \ ------------
-|___// |\__,_|_|\_\___/ sjaks.github.io
+|___// |\__,_|_|\_\___/ jaks.fi
    |__/                
 
 BRIEF:
 My homepage source code
 */
 
+@font-face {
+    font-family: Icsl;
+    src: url("../fonts/Inconsolata.otf") format("opentype");
+}
+
 body, html {
-    font-family: 'Inconsolata', monospace;
+    font-family: Icsl;
     color: #eeeeee;
     background-color: #111111;
     font-size: 15px;
@@ -167,63 +172,4 @@ a:hover {
 
 .git-clause-right {
     float: right;
-}
-
-#loading-screen {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 99;
-    background: #111111;
-}
-
-.daemon-spinner {
-    width: 400px;
-    height: 50px;
-    margin: 100px auto;
-    position: relative;
-}
-
-.packet-route {
-    width: 370px;
-    top: 45px;
-    left: 30px;
-    position: absolute;
-}
-
-.daemon {
-    position: absolute;
-    font-size: 18px;
-    top: 50;
-}
-
-.daemon-1 {
-    left: 0;
-}
-
-.daemon-2 {
-    right: 0;
-}
-
-.packet {
-    position: relative;
-    font-size: 28px;
-    animation: packetflow 2s infinite;
-    -webkit-animation: packetflow 2s infinite;
-}
-
-.wait {
-    text-align: center;
-}
-
-@keyframes packetflow {
-    0% {left: 0px;}
-    50% {left: 300px;}
-    100% {left: 0px;}
-}
-
-@-webkit-keyframes packetflow {
-    0% {left: 0px;}
-    50% {left: 300px;}
-    100% {left: 0px;}
 }

@@ -1,3 +1,13 @@
+#       _       _        
+#  ___ (_) __ _| | _____  sjaks@github
+# / __|| |/ _` | |/ / __| jaks.fi
+# \__ \| | (_| |   <\__ \ ------------
+# |___// |\__,_|_|\_\___/ jaks.fi
+#    |__/                
+#
+# BRIEF:
+# My homepage source code
+
 sudo apt update
 sudo apt install -y nginx
 sudo apt install -y python3-certbot-nginx

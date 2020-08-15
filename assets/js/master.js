@@ -1,3 +1,15 @@
+/*
+      _       _        
+ ___ (_) __ _| | _____  sjaks@github
+/ __|| |/ _` | |/ / __| jaks.fi
+\__ \| | (_| |   <\__ \ ------------
+|___// |\__,_|_|\_\___/ jaks.fi
+   |__/                
+
+BRIEF:
+My homepage source code
+*/
+
 $(document).ready(function() {
     function getTimeStamp(actionTime) {
         var msMinute = 60 * 1000;
