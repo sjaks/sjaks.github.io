@@ -9,6 +9,7 @@ BRIEF:
 My homepage source code
 -->
 
+<!DOCTYPE xhtml>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -43,15 +44,12 @@ My homepage source code
         <meta name="twitter:title" content="Sami Jakonen :: jaks.fi">
         <meta name="twitter:image" content="https://jaks.fi/assets/images/cover.jpg"> 
         <meta name="twitter:description" content="Personal home page of Sami Jakonen. Information technology student at Tampere University of technology. Someone who loves free/libre/open source software and feels at home in the Linux terminal.">
-
-        <script src="assets/js/lib/jquery-3.5.1.min.js"></script>
-        <script src="assets/js/master.js"></script>
     </head>
     <body>
         <div class="landing-screen">
             <div class="header">
                 <div class="header-wrapper">
-                    <img width=64 src="assets/icons/balloon_dog.png">
+                    <img width=64 alt="Website icon" src="assets/icons/balloon_dog.svg">
                     <h1>jaks.fi</h1>
                     <p>
                         I love free/libre/open source software and I feel at home in the Linux terminal.
@@ -83,7 +81,7 @@ My homepage source code
         <div class="content-container">
             <div class="block">
                 <h1>Projects</h1>
-                <img class="block-img" src="assets/images/libreboot.jpg">
+                <img loading="lazy" alt="Projects" class="block-img" src="assets/images/static/libreboot.webp">
                 <div class="block-content">
                     The first programming language I touched was PHP as I've been building websites since elementary school.
                     Quickly after learning PHP, I moved on to Javascript and at university, I fell in love with Python.
@@ -111,7 +109,7 @@ My homepage source code
             </div>
             <div class="block">
                 <h1>Rice</h1>
-                <img class="block-img" src="assets/images/rice.jpg">
+                <img loading="lazy" alt="Rice" class="block-img" src="assets/images/static/rice.webp">
                 <div class="block-content">
                     I think one's operating system is no more than a tool but it's important to have good and powerful tools.
                     <br>
@@ -130,7 +128,7 @@ My homepage source code
             </div>
             <div class="block">
                 <h1>Toto</h1>
-                <img class="block-img" src="assets/images/toto.jpg">
+                <img loading="lazy" alt="Toto" class="block-img" src="assets/images/static/toto.webp">
                 <div class="block-content">
                     That's my pupper at lake Keitele.
                     <br>
@@ -158,39 +156,39 @@ My homepage source code
                 <div class="content">
                     <br>
                     <div class="log-block">
-                        <img src="assets/images/tux.jpg" alt="Tux">
+                        <img lazysrc="assets/images/posts/tux.jpg" alt="Tux">
                         <p>Using Linux at work is bliss</p>
                     </div>
                     <div class="log-block">
-                        <img src="assets/images/herwood.jpg" alt="Herwood">
+                        <img lazysrc="assets/images/posts/herwood.jpg" alt="Herwood">
                         <p>Mikkis from afar</p>
                     </div>
                     <div class="log-block">
-                        <img src="assets/images/trip.jpg" alt="Trip">
+                        <img lazysrc="assets/images/posts/trip.jpg" alt="Trip">
                         <p>Going home</p>
                     </div>
                     <div class="log-block">
-                        <img src="assets/images/dog.jpg" alt="Dog">
+                        <img lazysrc="assets/images/posts/dog.jpg" alt="Dog">
                         <p>Quite a life changer</p>
                     </div>
                     <div class="log-block">
-                        <img src="assets/images/2020.jpg" alt="2020">
+                        <img lazysrc="assets/images/posts/2020.jpg" alt="2020">
                         <p>Copenhagen 2020</p>
                     </div>
                     <div class="log-block">
-                        <img src="assets/images/tuni.jpg" alt="Tuni">
+                        <img lazysrc="assets/images/posts/tuni.jpg" alt="Tuni">
                         <p>Human potential unlimited</p>
                     </div>
                     <div class="log-block">
-                        <img src="assets/images/mikkis.jpg" alt="Mikkis">
+                        <img lazysrc="assets/images/posts/mikkis.jpg" alt="Mikkis">
                         <p>Oi, suuri ja mahtava...</p>
                     </div>
                     <div class="log-block">
-                        <img src="assets/images/cern.jpg" alt="Cern">
+                        <img lazysrc="assets/images/posts/cern.jpg" alt="Cern">
                         <p>Keeps nuclear physicists going</p>
                     </div>
                     <div class="log-block">
-                        <img src="assets/images/geneva.jpg" alt="Geneva">
+                        <img lazysrc="assets/images/posts/geneva.jpg" alt="Geneva">
                         <p>So many banks and Rolex stores</p>
                     </div>
                 </div>
@@ -203,10 +201,10 @@ My homepage source code
                     <br>
                 </div>
             </div>
-            <img width=24 src="assets/icons/balloon_dog.png">
-            Pasteleft - Sami Jakonen - jaks.fi
+            <footer>Pasteleft - Sami Jakonen - jaks.fi</footer>
             <br>
             <br>
         </div>
+        <script src="assets/js/master.js"></script>
     </body>
 </html>
