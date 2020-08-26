@@ -3,14 +3,14 @@ server {
         access_log /dev/null;
         error_log /dev/null;
         root /var/www/jaks.fi/html;
-        index index.html index.htm;
+        index index.html;
         server_name jaks.fi www.jaks.fi;
 
         location / {
                try_files $uri $uri/ =404;
         }
 
-        location /dir {
+        location /app {
                autoindex on;
         }
 

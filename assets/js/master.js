@@ -66,6 +66,7 @@ function getTimeStamp(actionTime) {
 function enableToggleMenus() {
     let togglePosts = document.getElementsByClassName("toggle-log")[0];
     let toggleGitHistory = document.getElementsByClassName("toggle-log")[1];
+    let toggleKeys = document.getElementsByClassName("toggle-log")[2];
 
     togglePosts.addEventListener("click", function() {
         this.classList.toggle("active");
@@ -75,7 +76,6 @@ function enableToggleMenus() {
             content.style.maxHeight = null;
         } else {
             revealPosts(content);
-            
         } 
     });
 
@@ -87,6 +87,17 @@ function enableToggleMenus() {
             content.style.maxHeight = null;
         } else {
             showGitInfo("https://jaks.fi/git", content);
+        }
+    });
+
+    toggleKeys.addEventListener("click", function() {
+        this.classList.toggle("active");
+        let content = this.nextElementSibling;
+
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
         }
     });
 }
