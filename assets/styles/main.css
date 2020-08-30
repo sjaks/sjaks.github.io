@@ -58,13 +58,15 @@ a:hover {
 .header ul li {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 12px;
-    padding-right: 15px;
     border-right: 1px dotted #2bbc8a;
 }
 
 .header ul .last {
     border-right: none;
+}
+
+.header ul li a {
+    padding: 0px 15px;
 }
 
 .landing-content {

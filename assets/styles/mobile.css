@@ -66,8 +66,13 @@ footer {
     list-style-type: none;
 }
 
-.header ul .last {
-    border-right: none;
+.header ul li {
+    display: block;
+    padding: 8px 0px;
+    text-align: center;
+    margin-bottom: 15px;
+    width: 90%;
+    border: 1px #2bbc8a solid;
 }
 
 .landing-content {
