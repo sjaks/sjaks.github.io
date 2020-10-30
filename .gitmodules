@@ -1,9 +1,9 @@
 [submodule "app/kalapuikko"]
 	path = app/kalapuikko
-	url = git@github.com:sjaks/vantaankosken-kalapuikko-js.git
+	url = https://github.com/sjaks/vantaankosken-kalapuikko-js.git
 [submodule "app/demooni"]
 	path = app/demooni
-	url = git@github.com:sjaks/demooni.git
+	url = https://github.com/sjaks/demooni.git
 [submodule "app/hash100"]
 	path = app/hash100
-	url = git@github.com:sjaks/hash100.git
+	url = https://github.com/sjaks/hash100.git
