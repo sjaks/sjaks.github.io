@@ -57,6 +57,11 @@ a:hover {
 
 .header-wrapper img {
     border-radius: 50%;
+    width: 64px;
+}
+
+.header-wrapper h1 {
+    font-size: 30px;
 }
 
 .header ul li {
