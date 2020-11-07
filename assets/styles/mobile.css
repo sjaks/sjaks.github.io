@@ -58,6 +58,10 @@ footer {
     padding: 30px;
 }
 
+.header-wrapper img {
+    border-radius: 50%;
+}
+
 .header ul li {
     vertical-align: middle;
     margin-right: 12px;

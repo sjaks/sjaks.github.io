@@ -55,6 +55,10 @@ a:hover {
     bottom: 4vh;
 }
 
+.header-wrapper img {
+    border-radius: 50%;
+}
+
 .header ul li {
     display: inline-block;
     vertical-align: middle;
