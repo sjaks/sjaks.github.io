@@ -147,8 +147,8 @@ function showGitInfo(url, wrapper)  {
                     gitTimestamp.innerHTML = getTimeStamp(events[i].timestamp);
 
                     gitLink.appendChild(gitRepo);
-                    gitLink.appendChild(gitClause);
                     gitLink.appendChild(gitTimestamp);
+                    gitLink.appendChild(gitClause);
                     wrapper.appendChild(gitLink);
                     wrapper.appendChild(gitBr);
                 }
