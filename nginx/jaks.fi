@@ -23,6 +23,11 @@ server {
                 proxy_pass http://localhost:6789;
         }
 
+        location /nginx {
+                deny all;
+                return 403;
+        }
+
         error_page 403 /error.html;
         error_page 404 /error.html;
         error_page 405 /error.html;
