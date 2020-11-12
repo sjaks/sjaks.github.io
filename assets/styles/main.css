@@ -67,15 +67,18 @@ a:hover {
 .header ul li {
     display: inline-block;
     vertical-align: middle;
-    border-right: 1px dotted #2bbc8a;
+    border: 1px solid #2bbc8a;
+    width: 100px;
+    padding: 5px 0px;
+    text-align: center;
 }
 
-.header ul .last {
-    border-right: none;
+.header ul li:hover {
+    background: #292929;
 }
 
-.header ul li a {
-    padding: 0px 15px;
+.header ul li a:hover {
+    text-decoration: none;
 }
 
 .landing-content {
@@ -102,6 +105,10 @@ a:hover {
     float: left;
 }
 
+.block-img {
+    border-radius: 40% 60% 62% 38% / 41% 39% 61% 59%;
+}
+
 .content-container .block-content {
     /* fit images into the container */
     height: 230px;
@@ -125,7 +132,8 @@ a:hover {
     width: 300px;
     display: block;
     margin: 0px auto;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .log-block img {

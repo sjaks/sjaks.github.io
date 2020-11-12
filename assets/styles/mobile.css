@@ -118,6 +118,10 @@ footer {
     margin: 30px auto;
 }
 
+.block-img {
+    border-radius: 40% 60% 62% 38% / 41% 39% 61% 59%;
+}
+
 .content-container .block-content {
     /* fit images into the container */
     width: 90%;
