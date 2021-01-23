@@ -22,6 +22,11 @@ server {
         location /hrr {
                 proxy_pass http://localhost:6789;
         }
+        
+        location /wakey {
+                proxy_pass http://localhost:6699/;
+                add_header Access-Control-Allow-Origin *;
+        }
 
         location /nginx {
                 deny all;
