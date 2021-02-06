@@ -109,8 +109,7 @@ function initLoops() {
 
     setInterval(function() {
         /* use a predefined birth day epoch time (12PM GMT) to get the age in ms */
-        ageField.innerHTML = ((Date.now() - 1574596800000) / 3.154e+10).toFixed(7);
-        cookieField.innerHTML = ((Date.now() - 1574596800000) / 8.64e+7).toFixed(0);
+        ageField.innerHTML = ((Date.now() - 1574596800000) / 3.154e+10).toFixed(9);
     }, 200);
 }
 
