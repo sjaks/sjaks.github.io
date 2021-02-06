@@ -46,7 +46,7 @@ footer {
 .header {
     width: 100%;
     min-height: 50%;
-    background: #222222F9;
+    background: #161719;
     position: relative;
 }
 
@@ -164,7 +164,7 @@ footer {
 
 .toggle-log {
     font-family: 'Inconsolata', monospace;
-    background-color: #222;
+    background-color: #1d1e21;
     color: #eee;
     cursor: pointer;
     padding: 18px;
@@ -176,7 +176,7 @@ footer {
 }
 
 .active, .toggle-log:hover {
-    background-color: #333;
+    background-color: #242529;
 }
 
 .content {
