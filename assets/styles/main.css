@@ -64,6 +64,10 @@ a:hover {
     font-size: 30px;
 }
 
+.header-wrapper ul {
+    padding: 0px;
+}
+
 .header ul li {
     display: inline-block;
     vertical-align: middle;
