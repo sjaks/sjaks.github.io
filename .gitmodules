@@ -7,3 +7,6 @@
 [submodule "app/hash100"]
 	path = app/hash100
 	url = https://github.com/sjaks/hash100.git
+[submodule "app/paneeli"]
+	path = app/paneeli
+	url = https://github.com/sjaks/paneeli
