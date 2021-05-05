@@ -36,6 +36,26 @@ server {
                 proxy_pass http://localhost:10990/;
                 add_header Access-Control-Allow-Origin *;
         }
+        
+        location /paneeli {
+                alias /home/sami/paneeli;
+                autoindex on;
+        }
+
+        location /hash100 {
+                alias /home/sami/hash100;
+                autoindex on;
+        }
+
+        location /demooni {
+                alias /home/sami/demooni;
+                autoindex on;
+        }
+
+        location /kalapuikko {
+                alias /home/sami/vantaankosken-kalapuikko-js;
+                autoindex on;
+        }
 
         location /nginx {
                 deny all;
