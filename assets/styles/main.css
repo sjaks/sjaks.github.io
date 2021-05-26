@@ -31,6 +31,12 @@ a, a:visited, a:hover {
     font-size: 1.9rem;
 }
 
+#status {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
 /* Small style changes for mobile */
 @media (max-width: 768px) {
     .landing-buttons .btn {
