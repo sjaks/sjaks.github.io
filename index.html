@@ -1,20 +1,13 @@
 <!--
-      _       _        
- ___ (_) __ _| | _____  sjaks@github
-/ __|| |/ _` | |/ / __| jaks.fi
-\__ \| | (_| |   <\__ \ ------------
-|___// |\__,_|_|\_\___/ sjaks
-   |__/                
-BRIEF:
-My homepage source code
+jaks.fi
+sjaks@github
 -->
 
 <!DOCTYPE xhtml>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" media="screen and (min-width: 700px)" href="assets/styles/main.css">
-        <link rel="stylesheet" media="screen and (min-width: 0px) and (max-width: 700px)" href="assets/styles/mobile.css">
+        <link rel="stylesheet" href="assets/styles/main.css">
         <link rel="icon" href="assets/icons/favicon.ico" type="image/png">
 
         <meta name="theme-color" content="#111">
@@ -22,8 +15,7 @@ My homepage source code
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <title>Sami Jakonen :: jaks.fi</title>
-        <meta name="description" content="Personal home page of Sami Jakonen. Information technology student at Tampere University of technology. Someone who loves free/libre/open source software and feels at home in the Linux terminal.">
-        <meta name="keywords" content="sami jakonen, personal website, projects, linux, rice, cv, resume, toto">
+        <meta name="description" content="Personal home page of Sami Jakonen">
         <meta name="subject" content="My personal website">
         <meta name="category" content="technology">
         <meta name="distribution" content="Global">
@@ -34,164 +26,50 @@ My homepage source code
         <meta name="og:title" content="Sami Jakonen :: jaks.fi">
         <meta name="og:type" content="website">
         <meta name="og:url" content="https://jaks.fi">
-        <meta name="og:image" content="https://jaks.fi/assets/images/cover.jpg">
         <meta name="og:site_name" content="Sami Jakonen :: jaks.fi">
-        <meta name="og:description" content="Personal home page of Sami Jakonen. Information technology student at Tampere University of technology. Someone who loves free/libre/open source software and feels at home in the Linux terminal.">
+        <meta name="og:description" content="Personal home page of Sami Jakonen">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     </head>
     <body>
-        <div class="landing-screen">
-            <div class="header">
-                <div class="header-wrapper">
-                    <img alt="Website icon" src="assets/icons/avatar.png">
-                    <h1>jaks.fi</h1>
-                    <p>
-                        I am passionate about the web, networking and minimalism. My interests towards libre/open source software
-                        and coding in general stem from my long relationship with GNU/Linux and many other open technologies.
-                        I have a professional background in software development in the hosting field and I study IT at Tampere University. 
-                    </p>
+        <div class="container landing-screen">
+            <div class="landing-wrapper d-flex align-items-center">
+                <div class="landing-content">
+                    <div class="row">
+                        <div class="col">
+                            <img alt="Website icon" src="assets/icons/avatar.png">
+                            <h1>Hello there! <span>👋</span></h1>
+                        </div>
+                    </div>
                     <br>
-                    <ul>
-                        <a target=_BLANK href="https://github.com/sjaks"><li>GitHub</li></a>
-                        <a target=_BLANK href="https://linkedin.com/in/sjaks"><li>LinkedIn</li></a>
-                        <a target=_BLANK href="https://t.me/sjaks"><li>Telegram</li></a>
-                        <a target=_BLANK href="https://steamcommunity.com/id/_sjaks"><li>Steam</li></a>
-                        <a target=_BLANK href="https://myanimelist.net/animelist/sjaks"><li>MAL</li></a>
-                  </ul>
-                </div>
-            </div>
-            <div class="landing-content">
-                <div class="content-container">
-                    <p>
-                        Sami Jakonen
-                        <br>
-                        Tampere, Finland
-                        <br>
-                        <a href='mailt&#111;&#58;&#115;a&#109;%69&#46;&#106;a&#107;&#111;&#110;%65&#110;&#64;&#105;ki&#46;&#102;i'>s&#97;mi&#46;jakone&#110;&#64;ik&#105;&#46;fi</a>
-                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                I am passionate about the web, networking and minimalism. My interests towards libre/open source software
+                                and coding in general stem from my long relationship with GNU/Linux and many other open technologies.
+                                I have a professional background in software development in the hosting field and I study IT at Tampere University. 
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col landing-buttons">
+                            <a target=_BLANK href="https://github.com/sjaks"><button type="button" class="btn btn-outline-info">GitHub</button></a>
+                            <a target=_BLANK href="https://linkedin.com/in/sjaks"><button type="button" class="btn btn-outline-info">LinkedIn</button></a>
+                            <a target=_BLANK href="https://t.me/sjaks"><button type="button" class="btn btn-outline-info">Telegram</button></a>
+                            <a target=_BLANK href="https://steamcommunity.com/id/_sjaks"><button type="button" class="btn btn-outline-info">Steam</button></a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                Contact me: <a href='mailt&#111;&#58;&#115;a&#109;%69&#46;&#106;a&#107;&#111;&#110;%65&#110;&#64;&#105;ki&#46;&#102;i'>s&#97;mi&#46;jakone&#110;&#64;ik&#105;&#46;fi</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="content-container">
-            <div class="block">
-                <h1>Projects</h1>
-                <img loading="lazy" alt="Projects" class="block-img" src="assets/images/static/libreboot.webp">
-                <div class="block-content">
-                    Here are some picks from my GitHub.
-                    <br style="display:block;content:'';margin-top:6;"> <!-- purkkaa mut toimii :-) -->
-                    <a target=_BLANK href="https://github.com/sjaks/pitemp">pitemp</a> temperature monitor <span class="tag tech">[Docker] [Grafana] [InfluxDB] [RPi]</span>
-                    <br>
-                    <a target=_BLANK href="https://github.com/sjaks/tempbodge">tempbodge</a>: very simple temperature thingy <span class="tag tech">[Python] [JS] [RPi]</span>
-                    <br>
-                    <a target=_BLANK href="https://github.com/sjaks/github-latest-events">github-latest-events</a> GitHub log app <span class="tag tech">[Nodejs] [Rest API]</span>
-                    <br>
-                    <a target=_BLANK href="https://github.com/sjaks/audioswitch-firmata">audioswitch-firmata</a>: audio switcher <span class="tag tech">[C#] [.NET] [Arduino]</span>
-                    <br>
-                    <a target=_BLANK href="https://github.com/sjaks/heratyskello">heratyskello</a>: friend wake-up gandget <span class="tag tech">[Python] [Nodejs] [RPi]</span>
-                    <br>
-                    <a target=_BLANK href="https://github.com/sjaks/manageri">manageri</a> .NET smarthome app <span class="tag tech">[C#] [.NET] [LibCEC]</span>
-                    <br>
-                    <a target=_BLANK href="https://github.com/sjaks/dynamo">dynamo</a>: DNS record manager <span class="tag tech">[Python] [Flask] [DNS]</span>
-                    <br>
-                    <a target=_BLANK href="https://github.com/sjaks/.files">.files</a>: Linux dotfiles <span class="tag tech">[Linux] [Shell] [Vim]</span>
-                    <br>
-                    <a target=_BLANK href="https://github.com/Seravo/seravo-plugin">seravo-plugin</a> Seravo WordPress plugin <span class="tag tech">[PHP] [jQuery] [WP]</span>
-                    <br>
-                    <a target=_BLANK href="https://github.com/sjaks/header-rickroll">hrr</a> Rickrolling with HTTP headers <span class="tag tech">[HTTP] [Nginx] [Nodejs]</span>
-                    <br>
-                    <a target=_BLANK href="https://github.com/sjaks/vantaankosken-kalapuikko-js">vantaankosken-kalapuikko-js</a> Game remake <span class="tag tech">[JS]</span>
-                    <br>
-                    <a target=_BLANK href="https://github.com/sjaks/jaks.fi">jaks.fi</a> this website <span class="tag tech">[HTML] [CSS] [JS] [Nginx]</span>
-                </div>
-            </div>
-            <div class="block">
-                <h1>Toto</h1>
-                <img loading="lazy" alt="Toto" class="block-img" src="assets/images/static/toto.webp">
-                <div class="block-content">
-                    <br>
-                    That's my pupper at lake Keitele.
-                    <br>
-                    <br>
-                    Toto is a registered German Mittelspitz born on November 24th 2019.
-                    He doesn't seem to like to code but instead, loves scratches and cottage cheese.
-                    <br>
-                    <br>
-                    <br>
-                    Age: <span class="tag" id="toto-age">0</span> years
-                    <br>
-                    Days without scratches: <span class="tag">0</span>
-                </div>
-            </div>
-            <div class="long-block">
-                <h1>Life</h1>
-                <p>Log of my life at random intervals</p>
-                <button class="toggle-log">Toggle posts</button>
-                <div class="content">
-                    <br>
-                    <div class="log-block">
-                        <img lazysrc="assets/images/posts/board.jpg" alt="White board">
-                        <p>Everyone should own a white board</p>
-                    </div>
-                    <div class="log-block">
-                        <img lazysrc="assets/images/posts/bigboy.jpg" alt="Big boy">
-                        <p>Growing up</p>
-                    </div>
-                    <div class="log-block">
-                        <img lazysrc="assets/images/posts/tux.jpg" alt="Tux">
-                        <p>Using Linux at work is bliss</p>
-                    </div>
-                    <div class="log-block">
-                        <img lazysrc="assets/images/posts/herwood.jpg" alt="Herwood">
-                        <p>Mikkis from afar</p>
-                    </div>
-                    <div class="log-block">
-                        <img lazysrc="assets/images/posts/trip.jpg" alt="Trip">
-                        <p>Going home</p>
-                    </div>
-                    <div class="log-block">
-                        <img lazysrc="assets/images/posts/dog.jpg" alt="Dog">
-                        <p>Quite a life changer</p>
-                    </div>
-                    <div class="log-block">
-                        <img lazysrc="assets/images/posts/2020.jpg" alt="2020">
-                        <p>Copenhagen 2020</p>
-                    </div>
-                    <div class="log-block">
-                        <img lazysrc="assets/images/posts/tuni.jpg" alt="Tuni">
-                        <p>Human potential unlimited</p>
-                    </div>
-                    <div class="log-block">
-                        <img lazysrc="assets/images/posts/mikkis.jpg" alt="Mikkis">
-                        <p>Oi, suuri ja mahtava...</p>
-                    </div>
-                    <div class="log-block">
-                        <img lazysrc="assets/images/posts/geneva.jpg" alt="Cern">
-                        <p>Many banks and Rolex stores</p>
-                    </div>
-                </div>
-            </div>
-            <div class="long-block">
-                <h1>Git</h1>
-                <p>My GitHub history fetched by <a target=_BLANK href="https://github.com/sjaks/github-latest-events">github-latest-events</a></p>
-                <button class="toggle-log">Toggle Git events</button>
-                <div class="content" id="git-view">
-                </div>
-            </div>
-            <div class="long-block">
-                <h1>Keys</h1>
-                <p>You'll find my crypto stuff here</p>
-                <button class="toggle-log">Toggle public keys</button>
-                <div class="content">
-                    <pre class="key"><code>
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOI0vDcW34zT4SuYQG6TxPA1PYfwfbOdaELYmAR/5hwS
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBNJnPX+OFnSbG2AwzJeMQizWtfG1lkv8icvmJzaoKQS
-                    </code></pre>
-                    <br>
-                </div>
-            </div>
-            <footer>Pasteleft - Sami Jakonen - jaks.fi</footer>
-            <br>
-            <br>
-        </div>
-        <script src="assets/js/master.js"></script>
     </body>
 </html>

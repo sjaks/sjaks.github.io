@@ -1,12 +1,5 @@
-#       _       _        
-#  ___ (_) __ _| | _____  sjaks@github
-# / __|| |/ _` | |/ / __| jaks.fi
-# \__ \| | (_| |   <\__ \ ------------
-# |___// |\__,_|_|\_\___/ sjaks
-#    |__/                
-#
-# BRIEF:
-# My homepage source code
+# jaks.fi
+# sjaks@github
 
 sudo apt update
 sudo apt install -y nginx
