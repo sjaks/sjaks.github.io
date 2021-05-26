@@ -10,10 +10,6 @@ server {
                try_files $uri $uri/ =404;
         }
 
-        location /app {
-               autoindex on;
-        }
-
         location /git {
                 proxy_pass http://localhost:4040/github-latest-events;
                 add_header Access-Control-Allow-Origin *;
