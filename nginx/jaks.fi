@@ -10,11 +10,6 @@ server {
                try_files $uri $uri/ =404;
         }
 
-        location /git {
-                proxy_pass http://localhost:4040/github-latest-events;
-                add_header Access-Control-Allow-Origin *;
-        }
-
         location /hrr {
                 proxy_pass http://localhost:6789;
         }
@@ -31,11 +26,6 @@ server {
         location /temperature {
                 proxy_pass http://localhost:10990/;
                 add_header Access-Control-Allow-Origin *;
-        }
-        
-        location /paneeli {
-                alias /home/sami/paneeli;
-                autoindex on;
         }
 
         location /hash100 {
@@ -54,6 +44,11 @@ server {
         }
 
         location /nginx {
+                deny all;
+                return 403;
+        }
+        
+        location /.git {
                 deny all;
                 return 403;
         }
