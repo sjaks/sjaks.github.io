@@ -1,10 +1,16 @@
+# homepage
+# sjaks@github
+
 server {
         charset utf-8;
         access_log /dev/null;
         error_log /dev/null;
-        root /var/www/jaks.fi/html;
+        root /home/sami/homepage;
         index index.html;
-        server_name jaks.fi www.jaks.fi;
+        server_name sjaks.dy.fi;
+
+
+        # Define proxy paths to server resources
 
         location / {
                try_files $uri $uri/ =404;
@@ -13,16 +19,11 @@ server {
         location /hrr {
                 proxy_pass http://localhost:6789;
         }
-        
-        location /wakey {
-                proxy_pass http://localhost:6699/;
-                add_header Access-Control-Allow-Origin *;
-        }
-        
+
         location /bonk {
                 proxy_pass http://localhost:1995/;
         }
-        
+
         location /temperature {
                 proxy_pass http://localhost:10990/;
                 add_header Access-Control-Allow-Origin *;
@@ -43,6 +44,9 @@ server {
                 autoindex on;
         }
 
+
+        # Disallow access to some paths
+
         location /nginx {
                 deny all;
                 return 403;
@@ -52,6 +56,9 @@ server {
                 deny all;
                 return 403;
         }
+
+
+        # Define custom error error
 
         error_page 403 /error.html;
         error_page 404 /error.html;
