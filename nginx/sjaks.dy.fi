@@ -3,43 +3,59 @@
 
 server {
         charset utf-8;
-        access_log /dev/null;
-        error_log /dev/null;
         root /home/sami/homepage;
         index index.html;
         server_name sjaks.dy.fi;
+
+        client_body_buffer_size 1k;
+        access_log /dev/null;
+        error_log /dev/null;
+        server_tokens off;
+
+        ssl_protocols TLSv1.2 TLSv1.3;
+        add_header X-Frame-Options "SAMEORIGIN";
+        add_header X-XSS-Protection "1; mode=block";
+        add_header Strict-Transport-Security "max-age=31536000; includeSubdomains; preload";
+        add_header X-Powered-By "<3";
 
 
         # Define proxy paths to server resources
 
         location / {
-               try_files $uri $uri/ =404;
+                limit_except GET HEAD { deny all; }
+                try_files $uri $uri/ =404;
         }
 
         location /hrr {
+                limit_except GET HEAD { deny all; }
                 proxy_pass http://localhost:6789;
         }
 
         location /bonk {
+                limit_except GET HEAD { deny all; }
                 proxy_pass http://localhost:1995/;
         }
 
         location /temperature {
+                limit_except GET HEAD POST { deny all; }
                 proxy_pass http://localhost:10990/;
                 add_header Access-Control-Allow-Origin *;
         }
 
         location /hash100 {
+                limit_except GET HEAD { deny all; }
                 alias /home/sami/hash100;
                 autoindex on;
         }
 
         location /demooni {
+                limit_except GET HEAD { deny all; }
                 alias /home/sami/demooni;
                 autoindex on;
         }
 
         location /kalapuikko {
+                limit_except GET HEAD { deny all; }
                 alias /home/sami/vantaankosken-kalapuikko-js;
                 autoindex on;
         }
@@ -51,7 +67,7 @@ server {
                 deny all;
                 return 403;
         }
-        
+
         location /.git {
                 deny all;
                 return 403;
