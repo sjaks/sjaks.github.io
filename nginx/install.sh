@@ -21,7 +21,7 @@ read dyemail
 echo "Enter dy.fi password:"
 read dypass
 
-crontab -l | { cat; echo "0 0 * * WED curl -D - --user ${dyemail}:${dypass} https://www.dy.fi/nic/update?hostname=sjaks.dy.fi"; } | crontab -
+crontab -l | { cat; echo "0 0 * * 1,5 curl -D - --user ${dyemail}:${dypass} https://www.dy.fi/nic/update?hostname=sjaks.dy.fi"; } | crontab -
 
 echo "---> Enabled dyndns for ${dyemail}"
 
