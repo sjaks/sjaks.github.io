@@ -2,6 +2,16 @@
 # sjaks@github
 
 server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+        access_log /dev/null;
+        error_log /dev/null;
+        server_tokens off;
+        server_name _;
+        return 444;
+}
+
+server {
         charset utf-8;
         root /home/sami/homepage;
         index index.html;
