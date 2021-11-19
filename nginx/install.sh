@@ -5,7 +5,7 @@ sudo apt update
 sudo apt install -y nginx
 sudo apt install -y python3-certbot-nginx
 
-echo "---> Installed Nginx!"
+echo "---> Installed Nginx and Certbot!"
 
 sudo ln -sf /home/sami/homepage/nginx/sjaks.dy.fi /etc/nginx/sites-available/sjaks.dy.fi
 sudo ln -sf /etc/nginx/sites-available/sjaks.dy.fi /etc/nginx/sites-enabled/sjaks.dy.fi
@@ -21,11 +21,12 @@ read dyemail
 echo "Enter dy.fi password:"
 read dypass
 
+crontab -r
 crontab -l | { cat; echo "0 0 * * 1,5 curl -D - --user ${dyemail}:${dypass} https://www.dy.fi/nic/update?hostname=sjaks.dy.fi"; } | crontab -
 
 echo "---> Enabled dyndns for ${dyemail}"
 
-sudo certbot --nginx -d sjaks.dy.fi
+sudo certbot --nginx --non-interactive --agree-tos --redirect -d sjaks.dy.fi -m ${dyemail}
 sudo certbot renew --dry-run
 
 echo "---> Setup certificates!"
