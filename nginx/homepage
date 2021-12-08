@@ -14,7 +14,7 @@ server {
 
 server {
     # Render homepage when accessed via the domain
-    server_name sjaks.dy.fi;
+    server_name sjaks.iki.fi;
     charset utf-8;
     root /home/sami/homepage;
     index index.html;
