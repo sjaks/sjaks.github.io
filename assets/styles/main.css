@@ -3,8 +3,18 @@ homepage
 sjaks@github.com
 */
 
+:root {
+    --sjaks-color: #008080;
+    --sjaks-color-alt: #0e4946;
+    --sjaks-color-back: #fafafa;
+}
+
+body, html {
+    background-color: var(--sjaks-color-back);
+}
+
 a, a:visited, a:hover {
-    color: var(--info) !important;
+    color: var(--sjaks-color) !important;
 }
 
 .landing-screen, .landing-wrapper {
@@ -15,20 +25,33 @@ a, a:visited, a:hover {
     padding: 20px;
 }
 
-.landing-content img {
-    border-radius: 50%;
-    width: 52px;
-    height: 52px;
-    float: left;
-    margin-right: 20px;
-}
-
 .landing-content h1 {
-    float: left;
+    display: inline;
+    font-size: 42px;
+    background-image: linear-gradient(45deg, var(--sjaks-color-alt), var(--sjaks-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    font-weight: 900;
+    background-size: 100%;
+    background-repeat: repeat;
+    text-transform: uppercase;
 }
 
-.landing-content h1 span {
-    font-size: 1.9rem;
+.landing-buttons .btn-outline-info {
+    border-color: var(--sjaks-color);
+    color: var(--sjaks-color);
+}
+
+.landing-buttons .btn-outline-info:hover, .landing-buttons .btn-outline-info:active {
+    border-color: var(--sjaks-color);
+    background-color: var(--sjaks-color);
+    color: var(--sjaks-color-back);
+}
+
+.ad {
+    margin: 18px 0px;
 }
 
 /* Small style changes for mobile */
@@ -38,17 +61,13 @@ a, a:visited, a:hover {
         margin-bottom: 0.5rem;
     }
 
-    .landing-content img {
-        width: 42px;
-        height: 42px;
-        margin-right: 10px;
-    }
-
     .landing-content h1 {
-        font-size: 1.8rem;
+        font-size: 2.0rem;
+        display: block;
+        text-align: center;
     }
 
-    .landing-content h1 span {
-        font-size: 1.6rem;
+    .landing-content p {
+        text-align: justify;
     }
 }
