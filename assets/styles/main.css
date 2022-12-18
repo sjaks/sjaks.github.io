@@ -17,12 +17,6 @@ a, a:visited, a:hover {
     color: var(--sjaks-color) !important;
 }
 
-.uptime {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-}
-
 .landing-screen, .landing-wrapper {
     height: 100%;
 }
