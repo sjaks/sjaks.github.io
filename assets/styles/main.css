@@ -4,8 +4,8 @@ sjaks@github.com
 */
 
 :root {
-    --sjaks-color: #008080;
-    --sjaks-color-alt: #0e4946;
+    --sjaks-color: #353535;
+    --sjaks-color-alt: #f1f1f1;
     --sjaks-color-back: #fafafa;
 }
 
@@ -17,57 +17,76 @@ a, a:visited, a:hover {
     color: var(--sjaks-color) !important;
 }
 
-.landing-screen, .landing-wrapper {
+.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.landing {
+    height: auto;
+    max-width: 500px;
+    padding: 80px 70px;
+    border: 3px var(--sjaks-color-alt) solid;
+    border-radius: 68% 27% 27% 65% / 61% 40% 60% 40%;
+}
+
+.landing .logo-wrapper {
+    width: 64px;
+    height: 64px;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    border: 1px var(--sjaks-color) solid;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.landing .logo-wrapper img {
+    width: 100%;
     height: 100%;
 }
 
-.landing-content {
-    padding: 20px;
+.landing h1 {
+    text-align: center;
+    color: var(--sjaks-color);
+    font-size: 28px;
 }
 
-.landing-content h1 {
-    display: inline;
-    font-size: 42px;
-    background-image: linear-gradient(45deg, var(--sjaks-color-alt), var(--sjaks-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    font-weight: 900;
-    background-size: 100%;
-    background-repeat: repeat;
-    text-transform: uppercase;
+.landing h2 {
+    text-align: center;
+    color: var(--sjaks-color);
+    font-size: 14px;
 }
 
-.landing-buttons .btn-outline-info {
-    border-color: var(--sjaks-color);
+.landing p {
+    text-align: justify;
+    color: var(--sjaks-color);
+    font-size: 14px;
+}
+
+.landing .landing-buttons {
+    text-align: center;
+}
+
+.landing .landing-buttons button {
     color: var(--sjaks-color);
 }
 
-.landing-buttons .btn-outline-info:hover, .landing-buttons .btn-outline-info:active {
-    border-color: var(--sjaks-color);
-    background-color: var(--sjaks-color);
+.landing .landing-buttons button:hover {
     color: var(--sjaks-color-back);
-}
-
-.ad {
-    margin: 18px 0px;
 }
 
 /* Small style changes for mobile */
 @media (max-width: 768px) {
+    .landing {
+        height: auto;
+        max-width: 500px;
+        border: none;
+    }
+
     .landing-buttons .btn {
         width:100%;
         margin-bottom: 0.5rem;
-    }
-
-    .landing-content h1 {
-        font-size: 2.0rem;
-        display: block;
-        text-align: center;
-    }
-
-    .landing-content p {
-        text-align: justify;
     }
 }
