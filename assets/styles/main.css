@@ -5,6 +5,7 @@ sjaks@github.com
 
 :root {
     --color: #373b3f;
+    --color-alt: #2e69a8;
     --color-back: #f7f7f7;
 }
 
@@ -15,12 +16,12 @@ body, html {
 }
 
 a, a:visited {
-    color: var(--color) !important;
+    color: var(--color-alt) !important;
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--color) !important;
+    color: var(--color-alt) !important;
     text-decoration: underline;
 }
 
@@ -149,6 +150,10 @@ footer {
         float: left;
     }
 
+    aside ul {
+        line-height: 2.3;
+    }
+
     footer {
         text-align: center;
     }
@@ -156,5 +161,9 @@ footer {
     .logo-wrapper {
         float: unset;
         margin: 15px auto;
+    }
+
+    aside ul li a {
+        padding: 9px;
     }
 }
