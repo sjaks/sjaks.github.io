@@ -4,89 +4,157 @@ sjaks@github.com
 */
 
 :root {
-    --sjaks-color: #353535;
-    --sjaks-color-alt: #f1f1f1;
-    --sjaks-color-back: #fafafa;
+    --color: #373b3f;
+    --color-back: #f7f7f7;
 }
 
 body, html {
-    background-color: var(--sjaks-color-back);
+    background-color: var(--color-back);
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--color);
 }
 
-a, a:visited, a:hover {
-    color: var(--sjaks-color) !important;
+a, a:visited {
+    color: var(--color) !important;
+    text-decoration: none;
 }
 
-.center-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+a:hover {
+    color: var(--color) !important;
+    text-decoration: underline;
 }
 
-.landing {
+.wrapper {
+    max-width: 720px;
+    margin: 40px auto;
+}
+
+.content {
+    display: block;
+    width: 100%;
     height: auto;
-    max-width: 500px;
-    padding: 80px 70px;
-    border: 3px var(--sjaks-color-alt) solid;
-    border-radius: 68% 27% 27% 65% / 61% 40% 60% 40%;
+    overflow: auto;
 }
 
-.landing .logo-wrapper {
+heading {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+
+heading h1 {
+    margin: 8px 0px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 2.5rem;
+    display: block;
+    width: 400px;
+    float: left;
+}
+
+heading h2 {
+    margin: 8px 0px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 1rem;
+    display: block;
+    width: 400px;
+    float: left;
+}
+
+hr {
+    margin: 22px 0px;
+    border: 0px;
+    height: 0px;
+    border-top: 1px solid var(--color);
+    border-bottom: 1px solid var(--color);
+}
+
+main {
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 400px;
+    box-sizing: border-box;
+    float: left;
+}
+
+aside {
+    float: right;
+    max-width: 320px;
+}
+
+aside ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: square;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+footer {
+    opacity: 0.8;
+    font-size: .8rem;
+    display: block;
+    width: 100%;
+    padding: 42px 0px;
+}
+
+.logo-wrapper {
+    float: right;
     width: 64px;
     height: 64px;
-    margin: 0px auto;
-    margin-bottom: 20px;
-    border: 1px var(--sjaks-color) solid;
-    border-radius: 50%;
-    padding: 15px;
+    margin-top: 22px;
 }
 
-.landing .logo-wrapper img {
+.logo-wrapper img {
     width: 100%;
     height: 100%;
 }
 
-.landing h1 {
-    text-align: center;
-    color: var(--sjaks-color);
-    font-size: 28px;
-}
-
-.landing h2 {
-    text-align: center;
-    color: var(--sjaks-color);
-    font-size: 14px;
-}
-
-.landing p {
-    text-align: justify;
-    color: var(--sjaks-color);
-    font-size: 14px;
-}
-
-.landing .landing-buttons {
-    text-align: center;
-}
-
-.landing .landing-buttons button {
-    color: var(--sjaks-color);
-}
-
-.landing .landing-buttons button:hover {
-    color: var(--sjaks-color-back);
-}
-
 /* Small style changes for mobile */
-@media (max-width: 768px) {
-    .landing {
-        height: auto;
-        max-width: 500px;
-        border: none;
+@media (max-width: 720px) {
+    heading h1 {
+        margin: 8px 0px;
+        font-weight: 500;
+        line-height: 1.2;
+        font-size: 2.5rem;
+        display: block;
+        width: 100%;
+        text-align: center;
     }
 
-    .landing-buttons .btn {
-        width:100%;
-        margin-bottom: 0.5rem;
+    heading h2 {
+        margin: 8px 0px;
+        font-weight: 500;
+        line-height: 1.2;
+        font-size: 1rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .content {
+        overflow: hidden;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+        margin-left: 22px;
+        margin-top: 22px;
+        float: left;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .logo-wrapper {
+        float: unset;
+        margin: 15px auto;
     }
 }
