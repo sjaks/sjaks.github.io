@@ -4,9 +4,9 @@ sjaks@github.com
 */
 
 :root {
-    --color: #373b3f;
-    --color-alt: #2e69a8;
-    --color-back: #f7f7f7;
+    --color: #012d30cc;
+    --color-alt: #0b5f47e3;
+    --color-back: #fffdf1;
 }
 
 body, html {
@@ -103,9 +103,8 @@ footer {
 
 .logo-wrapper {
     float: right;
-    width: 64px;
-    height: 64px;
-    margin-top: 22px;
+    width: 100px;
+    height: 100px;
 }
 
 .logo-wrapper img {
