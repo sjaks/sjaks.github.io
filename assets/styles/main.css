@@ -75,7 +75,7 @@ hr {
 main {
     font-weight: 400;
     line-height: 1.5;
-    max-width: 400px;
+    max-width: 580px;
     box-sizing: border-box;
     float: left;
 }
@@ -140,17 +140,26 @@ footer {
 
     main {
         width: 100%;
+        padding-left: 8px;
+        padding-right: 8px;
+        text-align: justify;
     }
 
     aside {
         width: 100%;
-        margin-left: 22px;
-        margin-top: 22px;
+        margin-top: 32px;
+        margin-bottom: 32px;
         float: left;
     }
 
     aside ul {
-        line-height: 2.3;
+        line-height: 3.3;
+        width: 100%;
+        text-align: center;
+    }
+
+    aside ul li {
+        list-style-type: none;
     }
 
     footer {
