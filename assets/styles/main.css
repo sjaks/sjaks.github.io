@@ -147,14 +147,13 @@ footer {
 
     aside {
         width: 100%;
-        margin-top: 32px;
+        margin-top: 18px;
         margin-bottom: 32px;
         float: left;
+        max-width: none;
     }
 
     aside ul {
-        line-height: 3.3;
-        width: 100%;
         text-align: center;
     }
 
@@ -172,6 +171,16 @@ footer {
     }
 
     aside ul li a {
-        padding: 9px;
+        display: block;
+        margin: 12px auto;
+        width: 200px;
+        padding: 15px;
+        border: 1px var(--color-alt) dotted;
+        border-radius: 4px;
+    }
+
+    aside ul li a:active {
+        background: var(--color-alt);
+        color: #ffffff !important;
     }
 }
