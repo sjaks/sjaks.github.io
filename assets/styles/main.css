@@ -112,6 +112,44 @@ footer {
     height: 100%;
 }
 
+.menu {
+    height: 10px;
+    margin-top: 15px;
+}
+
+.item {
+    border-top: 2px solid var(--color);
+    border-left: 2px solid var(--color);
+    border-right: 2px solid var(--color);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-right: 10px;
+    float: left;
+}
+
+.item a {
+    color: var(--color);
+    text-decoration: none;
+}
+
+.item:hover, .active {
+    background: var(--color);
+    cursor: pointer;
+}
+
+.item:hover a, .active a {
+    color: var(--color-back) !important;
+}
+
+.now {
+    margin-top: 25px;
+}
+
+
 /* Small style changes for mobile */
 @media (max-width: 720px) {
     heading h1 {
@@ -182,5 +220,20 @@ footer {
     aside ul li a:active {
         background: var(--color-alt);
         color: #ffffff !important;
+    }
+
+    .menu {
+        height: 18px;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 180px;
+    }
+    
+    .item {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-right: 10px;
     }
 }
