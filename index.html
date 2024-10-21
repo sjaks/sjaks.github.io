@@ -137,5 +137,11 @@ sjaks@github
                 }
             }
         </script>
+        <script>
+            const data = fetch('https://sjaks.iki.fi/cookbook/recipe/aasiatacot')
+                .then(data => {
+                    console.log(data);
+                });
+        </script>
     </body>
 </html>
