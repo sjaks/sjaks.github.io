@@ -64,14 +64,6 @@ heading h2 {
     float: left;
 }
 
-hr {
-    margin: 22px 0px;
-    border: 0px;
-    height: 0px;
-    border-top: 1px solid var(--color);
-    border-bottom: 1px solid var(--color);
-}
-
 main {
     font-weight: 400;
     line-height: 1.5;
@@ -113,8 +105,10 @@ footer {
 }
 
 .menu {
-    height: 10px;
+    height: 32px;
     margin-top: 15px;
+    border-bottom: 2px solid var(--color);
+    margin-bottom: 22px;
 }
 
 .item {
@@ -223,10 +217,13 @@ footer {
     }
 
     .menu {
-        height: 18px;
+        height: 40px;
         margin: 0 auto;
         margin-top: 20px;
-        width: 275px;
+        width: 100%;
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: center;
     }
 
     .item {
