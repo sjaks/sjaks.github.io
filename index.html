@@ -45,10 +45,10 @@ sjaks@github
             </heading>
             <div class="menu">
                 <div class="item active">
-                    <a href="/">Home</a>
+                    <a href="#" id="home" onclick="loadContent(this.id)">Home</a>
                 </div>
                 <div class="item">
-                    <a href="cv.html">CV</a>
+                    <a href="#" id="cv" onclick="loadContent(this.id)">CV</a>
                 </div>
                 <div class="item">
                     <a href="https://sjaks.iki.fi/cookbook">Recipes</a>
@@ -56,7 +56,7 @@ sjaks@github
             </div>
             <hr>
             <div class="content">
-                <main>
+                <main id="main-content">
                     Hi! I’m a Full Stack Developer at Cinia with a passion for coding, software architecture and FOSS.
                     I hold a Master’s in IT (DI), and on top of being intrigued by designing and building software products,
                     I am very keen on improving customer communication and learning more about good software product
@@ -73,5 +73,70 @@ sjaks@github
                 sjaks.iki.fi
             </footer>
         </div>
+
+        <template id="home-template">
+            <p>
+                Hi! I’m a Full Stack Developer at Cinia with a passion for coding, software architecture and FOSS.
+                I hold a Master’s in IT (DI), and on top of being intrigued by designing and building software products,
+                I am very keen on improving customer communication and learning more about good software product
+                and process management.
+            </p>
+        </template>
+
+        <template id="cv-template">
+            This is my simplified <i>curriculum vitae</i> with the most noteworthy accomplishments.
+            <div">
+                <h3>Work experience</h3>
+                <ul>
+                    <li>Cinia - Software developer - 05/2023 - present</li>
+                    <li>Seravo - Software developer - 09/2020 - 09/2022</li>
+                    <li>Seravo - Intern - 05/2020 - 09/2020</li>
+                </ul>
+                <h3>Education</h3>
+                <ul>
+                    <li>Tampere University - Master of Science in Technology - 2022 - 2024</li>
+                    <li>Tampere University - Bachelor of Science - 2018 - 2022</li>
+                </ul>
+                <h3>Tinkering projects</h3>
+                <ul>
+                    <li>Many coding projects on my GitHub</li>
+                    <li>Home automation and Home Assistant setup</li>
+                    <li>Linux and MacOS systems</li>
+                    <li>Gravel bike</li>
+                </ul>
+                <h3>Technologies</h3>
+                <ul>
+                    <li>Javascript/Typescript/React</li>
+                    <li>Python</li>
+                    <li>Java/Spring</li>
+                    <li>HTML/CSS</li>
+                    <li>Linux CLI and networking tools</li>
+                    <li>Docker/GitHub Actions/GitLab CI</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+        </template>
+
+        <script>
+            function loadContent(page) {
+                const template = document.getElementById(`${page}-template`);
+
+                if (template) {
+                    const content = document.importNode(template.content, true);
+                    const mainContent = document.getElementById('main-content');
+                    mainContent.innerHTML = '';
+                    mainContent.appendChild(content);
+
+                    const elements = document.querySelectorAll('.active');
+
+                    elements.forEach(function(element) {
+                        element.classList.remove('active');
+                    });
+
+                    const activeTab = document.getElementById(page);
+                    activeTab.parentElement.classList.add("active");
+                }
+            }
+        </script>
     </body>
 </html>
