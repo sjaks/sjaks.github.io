@@ -45,13 +45,13 @@ sjaks@github
             </heading>
             <div class="menu">
                 <div class="item active">
-                    <a href="#" id="home" onclick="loadContent(this.id)">Home</a>
+                    <a id="home" onclick="loadContent(this.id)">Home</a>
                 </div>
                 <div class="item">
-                    <a href="#" id="cv" onclick="loadContent(this.id)">CV</a>
+                    <a id="cv" onclick="loadContent(this.id)">CV</a>
                 </div>
                 <div class="item">
-                    <a href="https://sjaks.iki.fi/cookbook">Recipes</a>
+                    <a id="cookbook" onclick="loadContent(this.id)">Recipes</a>
                 </div>
             </div>
             <div class="content">
@@ -74,12 +74,10 @@ sjaks@github
         </div>
 
         <template id="home-template">
-            <p>
                 Hi! I’m a Full Stack Developer at Cinia with a passion for coding, software architecture and FOSS.
                 I hold a Master’s in IT (DI), and on top of being intrigued by designing and building software products,
                 I am very keen on improving customer communication and learning more about good software product
                 and process management.
-            </p>
         </template>
 
         <template id="cv-template">
@@ -116,32 +114,20 @@ sjaks@github
             </div>
         </template>
 
-        <script>
-            function loadContent(page) {
-                const template = document.getElementById(`${page}-template`);
-
-                if (template) {
-                    const content = document.importNode(template.content, true);
-                    const mainContent = document.getElementById('main-content');
-                    mainContent.innerHTML = '';
-                    mainContent.appendChild(content);
-
-                    const elements = document.querySelectorAll('.active');
-
-                    elements.forEach(function(element) {
-                        element.classList.remove('active');
-                    });
-
-                    const activeTab = document.getElementById(page);
-                    activeTab.parentElement.classList.add("active");
-                }
-            }
-        </script>
-        <script>
-            const data = fetch('https://sjaks.iki.fi/cookbook/recipe/aasiatacot')
-                .then(data => {
-                    console.log(data);
-                });
-        </script>
+        <template id="cookbook-template">
+            <div id="recipe-container">
+                <span class="close-btn" onclick="closeRecipe()">&#x2715;</span>
+                <div id="recipe-view"></div>
+            </div>
+            <span style="color:darkred">WIP!</span> Some quite alright recipes. Many are vegan and all of them fit in a vegetarian diet. The recipes are in Finnish, but there're English translations available.
+            <table id="cookbook-content">
+                <tr>
+                    <th>Recipe</th>
+                    <th>Allergies</th>
+                    <th>Favourite</th>
+                </tr>
+            </table>
+        </template>
+        <script src="assets/scripts/recipes.js"></script>
     </body>
 </html>

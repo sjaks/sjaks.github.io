@@ -143,6 +143,42 @@ footer {
     margin-top: 25px;
 }
 
+#recipe-container {
+    position: relative;
+    border: 1px var(--color) solid;
+    border-radius: 3px;
+    display: none;
+    margin-bottom: 25px;
+}
+
+#recipe-view {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.close-btn {
+    cursor: pointer;
+    position: absolute;
+    padding: 7px;
+    right: 7px;
+    top: 3px;
+}
+
+th {
+    text-align: left;
+}
+
+td {
+    min-width: 200px;
+}
+
+td a {
+    cursor: pointer;
+}
+
+#cookbook-content {
+    padding-top: 25px;
+}
 
 /* Small style changes for mobile */
 @media (max-width: 720px) {
@@ -186,6 +222,7 @@ footer {
     }
 
     aside ul {
+        margin-top: 25px;
         text-align: center;
     }
 
