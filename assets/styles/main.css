@@ -40,8 +40,7 @@ a:hover {
 heading {
     display: block;
     width: 100%;
-    height: auto;
-    overflow: auto;
+    height: 110px;
 }
 
 heading h1 {
@@ -178,6 +177,14 @@ td a {
 
 #cookbook-content {
     padding-top: 25px;
+}
+
+.lang-select {
+    margin-top: 25px;
+}
+
+.lang-select span {
+    cursor: pointer;
 }
 
 /* Small style changes for mobile */

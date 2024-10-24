@@ -34,9 +34,11 @@ function getRecipes(recipe, language) {
                 data.recipes.map(recipe => {
                     return `
                                     <tr>
-                                        <td>
+                                        <td class="finnish">
                                             <a href="?r=${recipe.name}">${recipe.name}</a>
-                                            (<a href="?r=${recipe.name}&lang=en">en</a>)
+                                        </td>
+                                        <td class="english" style="display: none">
+                                            <a href="?r=${recipe.name}&lang=en">${recipe.nameLoc}</a>
                                         </td>
                                         <td>${recipe.allergies.join(", ")}</td>
                                         <td>${recipe.star ? "&#x2713;" : ""}</td>
@@ -88,4 +90,22 @@ function loadContent(page, recipe, language) {
             clearParam();
         }
     }
+}
+
+function showFinnish() {
+    document.querySelectorAll('.finnish').forEach(function (element) {
+        element.style.display = 'table-cell';
+    });
+    document.querySelectorAll('.english').forEach(function (element) {
+        element.style.display = 'none';
+    });
+}
+
+function showEnglish() {
+    document.querySelectorAll('.finnish').forEach(function (element) {
+        element.style.display = 'none';
+    });
+    document.querySelectorAll('.english').forEach(function (element) {
+        element.style.display = 'table-cell';
+    });
 }
