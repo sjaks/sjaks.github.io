@@ -31,7 +31,7 @@ sjaks@github
             let FF_FOUC_FIX;
         </script>
     </head>
-    <body>
+    <body onload="initialize()">
         <div class="wrapper">
             <heading>
                 <div class="logo-wrapper">
@@ -123,7 +123,7 @@ sjaks@github
                 <span class="close-btn" onclick="closeRecipe()">&#x2715;</span>
                 <div id="recipe-view"></div>
             </div>
-            <span style="color:darkred">WIP!</span> Some quite alright recipes. Many are vegan and all of them fit in a vegetarian diet. The recipes are in Finnish, but there're English translations available.
+            Some quite alright recipes. Many are vegan - all fit in a vegetarian diet. The recipes have initially been written in Finnish, but there're AI translations available for English.
             <div class="lang-select">
                 Recipe language: <span onclick="showFinnish()">FI</span> | <span onclick="showEnglish()">EN</span>
             </div>
