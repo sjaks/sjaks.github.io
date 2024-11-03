@@ -33,7 +33,7 @@ sjaks@github
     </head>
     <body onload="initialize()">
         <div class="wrapper">
-            <heading>
+            <div class="heading">
                 <div class="logo-wrapper">
                     <img alt="Logo" src="/assets/icons/cabba.jpeg">
                 </div>
@@ -46,7 +46,7 @@ sjaks@github
                         &#115;&#97;m&#105;&#46;&#106;akonen&#64;iki&#46;fi
                     </a>
                 </h2>
-            </heading>
+            </div>
             <div class="menu">
                 <div class="item active">
                     <a id="home" onclick="loadContent(this.id)">Home</a>
@@ -73,7 +73,12 @@ sjaks@github
                 </aside>
             </div>
             <footer>
-                sjaks.iki.fi
+                <a href="https://512kb.club/" style="display: none">
+                    <img height=26 src="/assets/banners/green-team.gif" alt="Green team">
+                </a>
+                <a href="https://iki.fi/">
+                    <img height=28 src="/assets/banners/iki.gif" alt="Green team">
+                </a>
             </footer>
         </div>
 
@@ -86,7 +91,7 @@ sjaks@github
 
         <template id="cv-template">
             This is my simplified <i>curriculum vitae</i> with the most noteworthy accomplishments.
-            <div">
+            <div>
                 <h3>Work experience</h3>
                 <ul>
                     <li>Cinia - Software developer - 05/2023 - present</li>
