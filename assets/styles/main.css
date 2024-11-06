@@ -190,7 +190,7 @@ td a {
 
 /* Small style changes for mobile */
 @media (max-width: 720px) {
-    heading h1 {
+    .heading h1 {
         margin: 8px 0px;
         font-weight: 500;
         line-height: 1.2;
@@ -200,7 +200,7 @@ td a {
         text-align: center;
     }
 
-    heading h2 {
+    .heading h2 {
         margin: 8px 0px;
         font-weight: 500;
         line-height: 1.2;
@@ -208,6 +208,7 @@ td a {
         display: block;
         width: 100%;
         text-align: center;
+        padding-bottom: 20px;
     }
 
     .content {
