@@ -35,6 +35,9 @@ a:hover {
     width: 100%;
     height: auto;
     overflow: auto;
+    border: 2px solid var(--color);
+    border-radius: 12px;
+    padding: 20px;
 }
 
 .heading {
@@ -74,6 +77,8 @@ main {
 aside {
     float: right;
     max-width: 320px;
+    padding-top: 3px;
+    padding-right: 10px;
 }
 
 aside ul {
@@ -89,7 +94,7 @@ footer {
     font-size: .8rem;
     display: block;
     width: 100%;
-    padding: 60px 0px;
+    padding: 40px 20px;
 }
 
 footer a, footer a:hover{
@@ -111,8 +116,7 @@ footer a, footer a:hover{
 .menu {
     height: 32px;
     margin-top: 15px;
-    border-bottom: 2px solid var(--color);
-    margin-bottom: 22px;
+    padding-left: 12px;
 }
 
 .item {
@@ -143,56 +147,6 @@ footer a, footer a:hover{
     color: var(--color-back) !important;
 }
 
-.now {
-    margin-top: 25px;
-}
-
-#recipe-container {
-    position: relative;
-    border: 1px var(--color) solid;
-    border-radius: 3px;
-    display: none;
-    margin-bottom: 25px;
-}
-
-#recipe-view {
-    padding-left: 20px;
-    padding-bottom: 20px;
-    padding-right: 20px;
-}
-
-.close-btn {
-    cursor: pointer;
-    position: absolute;
-    padding: 7px;
-    right: 7px;
-    top: 3px;
-}
-
-th {
-    text-align: left;
-}
-
-td {
-    min-width: 200px;
-}
-
-td a {
-    cursor: pointer;
-}
-
-#cookbook-content {
-    padding-top: 25px;
-}
-
-.lang-select {
-    margin-top: 25px;
-}
-
-.lang-select span {
-    cursor: pointer;
-}
-
 /* Small style changes for mobile */
 @media (max-width: 720px) {
     .heading h1 {
@@ -218,6 +172,9 @@ td a {
 
     .content {
         overflow: hidden;
+        border: none;
+        width: 100%;
+        padding: 0;
     }
 
     main {
@@ -246,6 +203,7 @@ td a {
 
     footer {
         text-align: center;
+        padding: 40px 0;
     }
 
     .logo-wrapper {
@@ -275,6 +233,8 @@ td a {
         margin-bottom: 24px;
         display: flex;
         justify-content: center;
+        padding: 0;
+        border-bottom: 2px solid var(--color);
     }
 
     .item {

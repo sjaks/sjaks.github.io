@@ -31,7 +31,7 @@ sjaks@github
             let FF_FOUC_FIX;
         </script>
     </head>
-    <body onload="initialize()">
+    <body>
         <div class="wrapper">
             <div class="heading">
                 <div class="logo-wrapper">
@@ -43,27 +43,23 @@ sjaks@github
                 <h2>
                     Contact me at
                     <a href='mailt&#111;&#58;%73ami&#46;j%61%6B&#111;ne&#110;&#64;i%6B&#105;%&#50;&#69;fi'>
-                        &#115;&#97;m&#105;&#46;&#106;akonen&#64;iki&#46;fi
+                        &#115;&#97;m&#105;&#46;&#106;ak&#111;nen&#64;iki&#46;fi
                     </a>
                 </h2>
             </div>
             <div class="menu">
                 <div class="item active">
-                    <a id="home" onclick="loadContent(this.id)">Home</a>
+                    <a id="home" href="/">Home</a>
                 </div>
                 <div class="item">
-                    <a id="cv" onclick="loadContent(this.id)">CV</a>
-                </div>
-                <div class="item">
-                    <a id="cookbook" onclick="loadContent(this.id)">Recipes</a>
+                    <a id="cookbook" href="/cookbook">Recipes</a>
                 </div>
             </div>
             <div class="content">
                 <main id="main-content">
-                    Hi! I’m a Full Stack Developer at Cinia with a passion for coding, software architecture and FOSS.
-                    I hold a Master’s in IT (DI), and on top of being intrigued by designing and building software products,
-                    I am very keen on improving customer communication and learning more about good software product
-                    and process management.
+                    I program, cycle and want to learn to cook better. Interested in building digital products,
+                    designing software architectures and improving customer communication and software
+                    product management processes.
                 </main>
                 <aside>
                     <ul>
@@ -84,65 +80,5 @@ sjaks@github
                 </a>
             </footer>
         </div>
-
-        <template id="home-template">
-                Hi! I’m a Full Stack Developer at Cinia with a passion for coding, software architecture and FOSS.
-                I hold a Master’s in IT (DI), and on top of being intrigued by designing and building software products,
-                I am very keen on improving customer communication and learning more about good software product
-                and process management.
-        </template>
-
-        <template id="cv-template">
-            This is my simplified <i>curriculum vitae</i> with the most noteworthy accomplishments.
-            <div>
-                <h3>Work experience</h3>
-                <ul>
-                    <li>Cinia - Software developer - 05/2023 - present</li>
-                    <li>Seravo - Software developer - 09/2020 - 09/2022</li>
-                    <li>Seravo - Intern - 05/2020 - 09/2020</li>
-                </ul>
-                <h3>Education</h3>
-                <ul>
-                    <li>Tampere University - Master of Science in Technology - 2022 - 2024</li>
-                    <li>Tampere University - Bachelor of Science - 2018 - 2022</li>
-                </ul>
-                <h3>Tinkering projects</h3>
-                <ul>
-                    <li>Many coding projects on my GitHub</li>
-                    <li>Home automation and Home Assistant setup</li>
-                    <li>Linux and MacOS systems</li>
-                    <li>Gravel bike</li>
-                </ul>
-                <h3>Technologies</h3>
-                <ul>
-                    <li>Javascript/Typescript/React</li>
-                    <li>Python</li>
-                    <li>Java/Spring</li>
-                    <li>HTML/CSS</li>
-                    <li>Linux CLI and networking tools</li>
-                    <li>Docker/GitHub Actions/GitLab CI</li>
-                    <li>SQL</li>
-                </ul>
-            </div>
-        </template>
-
-        <template id="cookbook-template">
-            <div id="recipe-container">
-                <span class="close-btn" onclick="closeRecipe()">&#x2715;</span>
-                <div id="recipe-view"></div>
-            </div>
-            Some quite alright recipes. Many are vegan - all fit in a vegetarian diet. The recipes have initially been written in Finnish, but there're AI translations available for English.
-            <div class="lang-select">
-                Recipe language: <span onclick="showFinnish()">FI</span> | <span onclick="showEnglish()">EN</span>
-            </div>
-            <table id="cookbook-content">
-                <tr>
-                    <th>Recipe</th>
-                    <th>Allergies</th>
-                    <th>Favourite</th>
-                </tr>
-            </table>
-        </template>
-        <script src="assets/scripts/recipes.js"></script>
     </body>
 </html>
